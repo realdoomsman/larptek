@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LarpTek - Advanced AI Terminal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">LarpTek</div>
+            <div class="loading-subtitle">Advanced AI Terminal Interface</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <div class="loading-text">Initializing neural networks...</div>
+        </div>
+    </div>
+
+    <!-- Main Terminal -->
+    <div class="terminal" id="terminal" style="display: none;">
+        <div class="header">
+            <div class="status-bar">
+                <span class="status-item">LarpTek v2.1</span>
+                <span class="status-item" id="time"></span>
+                <span class="status-item" id="market-status">MARKET: OPEN</span>
+                <span class="status-item" id="btc-price">BTC: $0</span>
+            </div>
+        </div>
+        
+        <div class="output" id="output">
+            <div class="welcome">
+                <div class="logo">LarpTek</div>
+                <div class="subtitle">Advanced AI Terminal Interface</div>
+                <div class="description">Professional-grade command-line interface with AI capabilities</div>
+                <div class="contract-info">
+                    <div class="contract-label">Contract Address:</div>
+                    <div class="contract-address" id="contract-address">0x742d35Cc6634C0532925a3b8D4C9db96C4b4d8b6</div>
+                    <button class="copy-btn" onclick="copyContract()">Copy</button>
+                </div>
+            </div>
+            <div class="line">
+                <span class="prompt">larp@tek</span>:~$ Type <span class="command">help</span> or <span class="command">experiment</span> to see available commands
+            </div>
+        </div>
+        
+        <div class="input-line">
+            <span class="prompt">larp@tek</span>:~$ 
+            <input type="text" id="input" autocomplete="off" spellcheck="false" placeholder="Enter command...">
+            <span class="cursor">█</span>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
